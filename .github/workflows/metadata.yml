@@ -5,9 +5,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v3
+              uses: actions/checkout@v7
             - name: Get repository metadata
-              id: repo-metadata
-              run: |
-                echo "REPO_NAME=$(basename $GITHUB_REPOSITORY)" >> $GITHUB_ENV
-                echo "REPO_OWNER=$(dirname $GITHUB_REPOSITORY | cut -d'/' -f2)" >> $GITHUB_ENV
+              run: echo Github Data $(toJSON(github))
