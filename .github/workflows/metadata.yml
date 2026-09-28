@@ -7,4 +7,4 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v7
             - name: Get repository metadata
-              run: echo Github Data $(toJSON(github))
+              run: echo "${{ toJSON(github) }}"
